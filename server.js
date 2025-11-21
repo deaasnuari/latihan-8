@@ -4,9 +4,10 @@ const PORT = 8001;
 app.use(express.json());
 
 const userRoutes = require('./routes/user.routes');
-
+const productRoutes = require('./routes/products.routes');
 
 app.use('/api/users', userRoutes);
+app.use('/api/products', productRoutes);
 app.use(express.urlencoded({ extended: true }));
 
 
